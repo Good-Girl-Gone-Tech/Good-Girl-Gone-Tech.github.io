@@ -1,6 +1,13 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+  toc_levels: 1..2
 
 # Permalinks
 permalink:        pretty
@@ -9,7 +16,7 @@ permalink:        pretty
 title:            'Good Girl Gone Tech'
 tagline:          'The journey of Katie Rovani taking over the world.'
 description:      'A brazen mother of two that pairs her driving passion of Operations with an ever-present desire to learn more.'
-url:              http://gggt.rovani.net
+url:              https://gggt.rovani.net
 baseurl:          /
 
 author:
@@ -18,8 +25,20 @@ author:
 
 paginate:         5
 
-# Custom vars
-version:          2.1.0
-
 github:
   repo:           https://github.com/Good-Girl-Gone-Tech/Good-Girl-Gone-Tech.github.io
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate
+  - jekyll-gist
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
