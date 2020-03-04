@@ -17,7 +17,7 @@ title:            'Good Girl Gone Tech'
 tagline:          'The journey of Katie Rovani taking over the world.'
 description:      'A brazen mother of two that pairs her driving passion of Operations with an ever-present desire to learn more.'
 url:              https://gggt.rovani.net
-baseurl:          /
+baseurl:          ''
 
 author:
   name:           'Katie Rovani'
